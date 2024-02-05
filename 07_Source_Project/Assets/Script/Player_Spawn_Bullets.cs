@@ -27,7 +27,5 @@ public class Player_Spawn_Bullets : MonoBehaviour
     {
         Debug.Log("Shoot Once");
         Instantiate(Bullet1, transform.position, transform.rotation);
-        Bullet1.transform.position += new Vector3(0, 1);
-
     }
 }

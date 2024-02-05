@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
+    public GameObject bullet;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,9 @@ public class BulletMovement : MonoBehaviour
     void Update()
     {
         this.transform.position += new Vector3(0, 0.1f);
+        if(this.transform.position.y >= 5.0f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
