@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 6003251946915736875}
   - component: {fileID: 6003251946915736874}
   - component: {fileID: 7809874070447952993}
+  - component: {fileID: -1835765662513056659}
   m_Layer: 0
   m_Name: Crystal Rock
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -115,3 +116,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!68 &-1835765662513056659
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6003251946915736873}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.60811746, y: 0.7326176}
+  - {x: 0.7662915, y: 0.7071157}
+  - {x: 1.4481716, y: 1.2771795}
+  - {x: 1.1170583, y: 0.35601938}
+  - {x: 1.255668, y: 0.06312959}
+  - {x: 0.8103783, y: -1.0775783}
+  - {x: 0.08267188, y: -0.9536854}
+  - {x: -0.55018353, y: -1.5755489}
+  - {x: -0.45266616, y: -1.5448555}
+  - {x: -0.33506584, y: -0.8649096}
+  - {x: -1.1487645, y: -0.9080931}
+  - {x: -1.0608414, y: 0.38160253}
+  - {x: -1.5063319, y: 0.8414827}
+  - {x: -1.5182748, y: 1.5758481}
+  - {x: -0.56407064, y: 0.76447064}
