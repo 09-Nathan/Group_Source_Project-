@@ -6,6 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class ButtonScript : MonoBehaviour
 {
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,4 +39,10 @@ public class ButtonScript : MonoBehaviour
     {
         SceneManager.LoadScene("Main Menu");
     }
+
+    public void RetryLevel()
+    {
+        SceneManager.LoadScene("");    // TYPE IN LEVEL NAME HERE
+    }
+
 }
