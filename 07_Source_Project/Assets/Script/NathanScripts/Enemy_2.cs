@@ -2,14 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class Enemy_2 : MonoBehaviour
 {
     public float speed;
-    public static float HP;
+    public int maxHP=3;
+    public static int HP;
 
-    private void Awake()
+    public EnemyHp Healthbar;
+    private void Start()
     {
-        HP = 3;
+        
+        HP = maxHP;
+        Healthbar.SetMaxHealth(maxHP);
+      
     }
     void Update()
     {
@@ -17,10 +23,16 @@ public class Enemy_2 : MonoBehaviour
         transform.Translate(movement);
 
 
-        if (transform.position.y < -5.2f)
+        if (transform.position.y < -5.2f||HP==0)
         {
             Destroy(gameObject);
         }
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            enemydamage(1);
+        }
+
+        
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -33,4 +45,10 @@ public class Enemy_2 : MonoBehaviour
             }
         }
     }     
+    void enemydamage(int enemydam)
+    {
+        HP -= enemydam;
+        Healthbar.SetHealth(HP);
+
+    }
 }
