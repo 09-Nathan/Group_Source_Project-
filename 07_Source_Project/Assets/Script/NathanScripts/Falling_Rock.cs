@@ -1,11 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Falling_Rock : MonoBehaviour
 {
     public float speed;
+    public scoretextscript ss;
 
+    private void Start()
+    {
+       
+    }
     void Update()
     {
         Vector2 movement = Vector2.down * speed * Time.deltaTime;
@@ -16,12 +21,18 @@ public class Falling_Rock : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Projectiles")
         {
-            Destroy(other.gameObject);
-            Destroy(gameObject);
+            ss.score += 5f;
+            Debug.Log("score");
+            Destroy(this.gameObject);
+            
+        }
+        else
+        {
+            Debug.Log("Collided");
         }
     }
 }

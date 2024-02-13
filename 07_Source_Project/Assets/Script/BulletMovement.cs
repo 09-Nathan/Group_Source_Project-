@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletMovement : MonoBehaviour
 {
-    public GameObject bullet;
+    public scoretextscript ss;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,4 +20,5 @@ public class BulletMovement : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
 }

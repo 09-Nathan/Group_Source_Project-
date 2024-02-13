@@ -10,11 +10,12 @@ public class Player_Movement : MonoBehaviour
     public float maxX;
     public float maxY;
     private Animator animator;
+    public PlayerScript ps;
     // Start is called before the first frame update
 
     private void Awake()
     {
-        animator = GetComponent<Animator>();
+       
     }
     // Update is called once per frame
     void Update()
@@ -48,12 +49,15 @@ public class Player_Movement : MonoBehaviour
 
         transform.position = new Vector2(clampedX, clampedY);
     }
+<<<<<<< Updated upstream:07_Source_Project/Assets/Script/Player_Movement.cs
+=======
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "Enemy")
         {
-            Destroy(gameObject);
+            ps.TakenDamage(1);
         }
     }
+>>>>>>> Stashed changes:07_Source_Project/Assets/Script/NathanScripts/Player_Movement.cs
 }

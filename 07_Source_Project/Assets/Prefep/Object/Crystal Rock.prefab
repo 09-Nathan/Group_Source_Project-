@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6003251946915736874}
   - component: {fileID: 7809874070447952993}
   - component: {fileID: -1835765662513056659}
+  - component: {fileID: -3341151647409101021}
   m_Layer: 0
   m_Name: Crystal Rock
   m_TagString: Enemy
@@ -116,6 +117,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  ss: {fileID: 4116700903192784779, guid: 8b99bc210b58c1b48936ac314c91ffd3, type: 3}
 --- !u!68 &-1835765662513056659
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -147,3 +149,24 @@ EdgeCollider2D:
   - {x: -1.5063319, y: 0.8414827}
   - {x: -1.5182748, y: 1.5758481}
   - {x: -0.56407064, y: 0.76447064}
+--- !u!50 &-3341151647409101021
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6003251946915736873}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
