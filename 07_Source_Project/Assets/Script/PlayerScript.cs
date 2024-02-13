@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PlayerScript : MonoBehaviour
 {
     public int maxHealth = 4;
@@ -21,8 +22,12 @@ public class PlayerScript : MonoBehaviour
         {
             TakenDamage(1);
         }
+        if (currentHealth <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
-    void TakenDamage(int damage)
+    public void TakenDamage(int damage)
     {
         currentHealth -= damage;
         healthBarScript.SetHealth(currentHealth);
