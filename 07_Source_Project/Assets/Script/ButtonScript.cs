@@ -40,9 +40,6 @@ public class ButtonScript : MonoBehaviour
         SceneManager.LoadScene("Main Menu");
     }
 
-    public void RetryLevel()
-    {
-        SceneManager.LoadScene("");    // TYPE IN LEVEL NAME HERE
-    }
+    
 
 }
