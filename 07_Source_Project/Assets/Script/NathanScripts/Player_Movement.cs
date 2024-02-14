@@ -15,7 +15,7 @@ public class Player_Movement : MonoBehaviour
 
     private void Awake()
     {
-       
+       animator = GetComponent<Animator>();
     }
     // Update is called once per frame
     void Update()
@@ -49,15 +49,4 @@ public class Player_Movement : MonoBehaviour
 
         transform.position = new Vector2(clampedX, clampedY);
     }
-<<<<<<< Updated upstream:07_Source_Project/Assets/Script/Player_Movement.cs
-=======
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Enemy")
-        {
-            ps.TakenDamage(1);
-        }
-    }
->>>>>>> Stashed changes:07_Source_Project/Assets/Script/NathanScripts/Player_Movement.cs
 }
