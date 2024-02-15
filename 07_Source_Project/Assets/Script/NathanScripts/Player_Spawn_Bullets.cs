@@ -25,7 +25,7 @@ public class Player_Spawn_Bullets : MonoBehaviour
     }
     void Firing()
     {
-        Debug.Log("Shoot Once");
+        //Debug.Log("Shoot Once");
         Instantiate(Bullet1, transform.position, transform.rotation);
     }
 }

@@ -16,11 +16,12 @@ public class Enemy_1 : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    private void OnTriggerEnter(Collider other)
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(other.gameObject.tag=="Projectiles")
+        if (collision.gameObject.tag == "Projectiles")
         {
-            Destroy(other.gameObject);
+            Destroy(collision.gameObject);
             Destroy(gameObject);
         }
     }
