@@ -1,15 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
+
 public class Falling_Rock : MonoBehaviour
 {
     public float speed;
-    public scoretextscript ss;
+    public GameManager scoremanage;
 
     private void Start()
     {
-       
+        
     }
     void Update()
     {
@@ -25,9 +25,9 @@ public class Falling_Rock : MonoBehaviour
     {
         if (other.gameObject.tag == "Projectiles")
         {
-            ss.score += 5f;
             Debug.Log("score");
             Destroy(this.gameObject);
+            GameManager.Score += 5;
             
         }
         else

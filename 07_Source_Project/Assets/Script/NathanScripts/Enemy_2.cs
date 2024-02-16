@@ -23,11 +23,15 @@ public class Enemy_2 : MonoBehaviour
         transform.Translate(movement);
 
 
-        if (transform.position.y < -5.2f||HP==0)
+        if (transform.position.y < -5.2f)
         {
             Destroy(gameObject);
         }
-
+        else if (HP==0)
+        {
+            Destroy(gameObject);
+            GameManager.Score += 20;
+        }
         
     }
     private void OnTriggerEnter2D(Collider2D collision)

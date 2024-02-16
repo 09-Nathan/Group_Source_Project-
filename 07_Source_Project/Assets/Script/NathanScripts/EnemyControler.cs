@@ -17,20 +17,7 @@ public class EnemyControler : MonoBehaviour
         startPos = transform.position;
         InvokeRepeating("Shoot", 0f, shootInterval);
     }
-
-    void Update()
-    {
-        Patrol();
-    }
-
-    void Patrol()
-    {
-        // ... (Previous patrol code)
-
-        // Adjust the patrol code based on your game's requirements
-
-    }
-    
+  
 
     void Shoot()
     {

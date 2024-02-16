@@ -23,6 +23,7 @@ public class Enemy_1 : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            GameManager.Score += 10;
         }
     }
 
