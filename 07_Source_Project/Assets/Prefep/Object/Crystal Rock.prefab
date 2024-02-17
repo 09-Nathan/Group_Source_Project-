@@ -116,8 +116,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a72e76880cb8384896aeeced0cf0668, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  ss: {fileID: 4116700903192784779, guid: 8b99bc210b58c1b48936ac314c91ffd3, type: 3}
+  speed: 2
+  scoremanage: {fileID: 0}
 --- !u!68 &-1835765662513056659
 EdgeCollider2D:
   m_ObjectHideFlags: 0

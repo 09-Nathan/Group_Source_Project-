@@ -293,6 +293,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   maxHP: 3
+  Bouns:
+  - {fileID: 5014752375475593253, guid: eead6034d0d57bc479a062e1779b9f39, type: 3}
+  - {fileID: 2634463593249761853, guid: 45308e5181b18da42ba07c5e69490ebd, type: 3}
+  - {fileID: 7032556352703471765, guid: 74032af71dbb651459878d037b0fe3a4, type: 3}
+  - {fileID: 7032556352703471765, guid: 74032af71dbb651459878d037b0fe3a4, type: 3}
+  - {fileID: 7032556352703471765, guid: 74032af71dbb651459878d037b0fe3a4, type: 3}
+  - {fileID: 7032556352703471765, guid: 74032af71dbb651459878d037b0fe3a4, type: 3}
+  - {fileID: 7032556352703471765, guid: 74032af71dbb651459878d037b0fe3a4, type: 3}
   Healthbar: {fileID: 858729185910308053}
 --- !u!1 &4358094273568710201
 GameObject:

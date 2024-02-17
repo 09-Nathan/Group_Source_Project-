@@ -143,7 +143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e029972259c1e3b47a793c88ebda3d88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
 --- !u!1 &4989641189500800353
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +191,7 @@ MonoBehaviour:
   patrolDistance: 2
   bulletPrefab: {fileID: 1394636115278038313, guid: 7c22950b6a87a7a448b7ca4b6eb3364b,
     type: 3}
-  shootInterval: 2
+  shootInterval: 1
 --- !u!1 &4989641189886656388
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,4 +239,4 @@ MonoBehaviour:
   patrolDistance: 2
   bulletPrefab: {fileID: 1394636115278038313, guid: 7c22950b6a87a7a448b7ca4b6eb3364b,
     type: 3}
-  shootInterval: 2
+  shootInterval: 1

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Falling_Rock : MonoBehaviour
 {
     public float speed;
-    public GameManager scoremanage;
 
     private void Start()
     {

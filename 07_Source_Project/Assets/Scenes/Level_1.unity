@@ -552,8 +552,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1, y: 841}
-  m_SizeDelta: {x: 454.34296, y: 133.01013}
+  m_AnchoredPosition: {x: -0.000022888, y: 844}
+  m_SizeDelta: {x: 705.7559, y: 133.01013}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &592952776
 GameObject:
@@ -1081,7 +1081,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1186992619
 Transform:
   m_ObjectHideFlags: 0
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 2674812342496300618, guid: feebe536de415c64d95b515341314e48,
     type: 3}
-  spawnInterval: 5
+  spawnInterval: 1.5
 --- !u!1 &1227414721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1372,6 +1372,8 @@ MonoBehaviour:
   txtScore: {fileID: 592952778}
   txtTime: {fileID: 525639109}
   Timer: 72
+  o1: {fileID: 1186992618}
+  o2: {fileID: 2051054227}
 --- !u!1 &2051054227
 GameObject:
   m_ObjectHideFlags: 0
@@ -1388,7 +1390,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2051054228
 Transform:
   m_ObjectHideFlags: 0
@@ -1417,4 +1419,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemyPrefab: {fileID: 4358094273232422490, guid: d62a139df28f4064c85da55b30ecac24,
     type: 3}
-  spawnInterval: 3
+  spawnInterval: 4

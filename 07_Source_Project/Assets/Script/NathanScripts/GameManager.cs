@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
 
      float deci;
     public static int Score;
+     public GameObject o1,o2;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +22,10 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         Timer -= Time.deltaTime;
-        deci = Mathf.Round(Timer%60f);
+        deci = Mathf.Round(Timer%100f);
         Total();
-        if(Timer == 0 )
+        Spawncount();
+        if (Timer == 0 )
         {
 
         }
@@ -32,5 +35,17 @@ public class GameManager : MonoBehaviour
     {
         txtScore.text = Score.ToString();
         txtTime.text = deci.ToString();
+    }
+
+    void Spawncount()
+    {
+        if(Timer < 60)
+        {
+            o1.SetActive(true);
+        }
+        if (Timer<50)
+        {
+            o2.SetActive(true);
+        }
     }
 }
