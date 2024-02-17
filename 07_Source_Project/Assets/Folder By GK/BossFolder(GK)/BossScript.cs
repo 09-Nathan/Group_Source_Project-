@@ -7,17 +7,19 @@ public class BossScript : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public BossHPScript BossHPScript;
+    public PlayerScript ps;
     // Start is called before the first frame update
     void Start()
     {
+        ps = GameObject.Find("player").GetComponent<PlayerScript>();
         currentHealth = maxHealth;
-        BossHPScript.SetMaxHealth(maxHealth);
+        BossHPScript.BossSetMaxHealth(maxHealth);
     }
 
     // Update is called once per frame
     void Update()
     {
-        this.transform.position -= new Vector3(0, 0.0005f);
+        this.transform.position -= new Vector3(0, 0.0015f);
         
         if (currentHealth <= 0)
         {
@@ -27,15 +29,15 @@ public class BossScript : MonoBehaviour
     public void BossTakenDamage(int damage)
     {
         currentHealth -= damage;
-        BossHPScript.SetHealth(currentHealth);
+        BossHPScript.BossSetHealth(currentHealth);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        if (collision.gameObject.tag == ("Projectiles"))
+        if (other.gameObject.tag == ("Projectiles"))
         {
             Debug.Log("Collision");
             BossTakenDamage(1);
-            Destroy(collision.gameObject);
+            Destroy(other.gameObject);
         }
     }
 }

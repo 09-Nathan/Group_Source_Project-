@@ -7,6 +7,7 @@ public class BulletController : MonoBehaviour
     public float speed = 5f;
     private Vector3 direction;
 
+
     void Update()
     {
         // Move the bullet in its current direction

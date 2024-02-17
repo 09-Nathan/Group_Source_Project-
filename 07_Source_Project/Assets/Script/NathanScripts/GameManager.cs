@@ -30,7 +30,7 @@ public class GameManager : MonoBehaviour
     
     void Total()
     {
-        txtScore.text = Score.ToString();
-        txtTime.text = deci.ToString();
+        //txtScore.text = Score.ToString();
+        //txtTime.text = deci.ToString();
     }
 }

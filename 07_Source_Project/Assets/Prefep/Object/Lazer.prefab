@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5478969767419571625}
   - component: {fileID: 4920367566518997206}
   - component: {fileID: 258001523075806842}
+  - component: {fileID: 5986620288836143199}
   - component: {fileID: 2261601240365154798}
   m_Layer: 0
   m_Name: Lazer
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 1c45107bf76030a47981c9779cc9f15e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -104,6 +105,19 @@ EdgeCollider2D:
   - {x: 0.00768137, y: 0.18435907}
   - {x: 0.088095665, y: -0.026810646}
   - {x: 0.014240921, y: -0.13058758}
+--- !u!114 &5986620288836143199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1394636115278038313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06b94eb45f37b484da6c97448f766528, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ps: {fileID: 0}
 --- !u!114 &2261601240365154798
 MonoBehaviour:
   m_ObjectHideFlags: 0
