@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 public class PlayerScript : MonoBehaviour
 {
@@ -24,7 +24,7 @@ public class PlayerScript : MonoBehaviour
         }
         if (currentHealth <= 0)
         {
-            Destroy(this.gameObject);
+            SceneManager.LoadScene("Game Lose");
         }
     }
     public void TakenDamage(int damage)

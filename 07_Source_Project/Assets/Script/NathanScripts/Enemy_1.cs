@@ -5,7 +5,12 @@ using UnityEngine;
 public class Enemy_1 : MonoBehaviour
 {
     public float speed;
-
+    public PlayerScript ps;
+    private void Start()
+    {
+        ps = GameObject.Find("player").GetComponent<PlayerScript>();
+        Debug.Log("PS Found");
+    }
     void Update()
     {
         Vector2 movement = Vector2.down * speed * Time.deltaTime;
@@ -24,6 +29,11 @@ public class Enemy_1 : MonoBehaviour
             Destroy(collision.gameObject);
             Destroy(gameObject);
             GameManager.Score += 10;
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            ps.TakenDamage(1);
+
         }
     }
 

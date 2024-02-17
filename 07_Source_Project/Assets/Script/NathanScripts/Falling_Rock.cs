@@ -6,10 +6,10 @@ public class Falling_Rock : MonoBehaviour
 {
     public float speed;
     public GameManager scoremanage;
-
+    public PlayerScript ps;
     private void Start()
     {
-        
+        ps = GameObject.Find("player").GetComponent<PlayerScript>();
     }
     void Update()
     {
@@ -30,9 +30,10 @@ public class Falling_Rock : MonoBehaviour
             GameManager.Score += 5;
             
         }
-        else
+        if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Collided");
+            ps.TakenDamage(1);
+
         }
     }
 }

@@ -8,11 +8,11 @@ public class Enemy_2 : MonoBehaviour
     public float speed;
     public int maxHP=3;
     public static int HP;
-
+    public PlayerScript ps;
     public EnemyHp Healthbar;
     private void Start()
     {
-        
+        ps = GameObject.Find("player").GetComponent<PlayerScript>();
         HP = maxHP;
         Healthbar.SetMaxHealth(maxHP);
       
@@ -39,6 +39,11 @@ public class Enemy_2 : MonoBehaviour
         if (collision.gameObject.tag == "Projectiles")
         {
             enemydamage(1);
+        }
+        if (collision.gameObject.tag == "Player")
+        {
+            ps.TakenDamage(1);
+
         }
     }
     void enemydamage(int enemydam)
