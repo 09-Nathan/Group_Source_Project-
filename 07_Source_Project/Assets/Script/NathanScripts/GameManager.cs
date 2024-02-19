@@ -7,10 +7,9 @@ public class GameManager : MonoBehaviour
 {
     public Text txtScore, txtTime;
     public float Timer;
-
-     float deci;
     public static int Score;
-     public GameObject o1,o2;
+    public GameObject o1,o2;
+    string format;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +21,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         Timer -= Time.deltaTime;
-        deci = Mathf.Round(Timer%100f);
+        float Min = Mathf.Floor(Timer/60);
+        float Sec = Mathf.RoundToInt(Timer % 60);
+        format = string.Format("{0:00}:{1:00}", Min, Sec);
         Total();
         Spawncount();
         if (Timer == 0 )
@@ -34,12 +35,12 @@ public class GameManager : MonoBehaviour
     void Total()
     {
         txtScore.text = Score.ToString();
-        txtTime.text = deci.ToString();
+        txtTime.text = format;
     }
 
     void Spawncount()
     {
-        if(Timer < 60)
+        if(Timer < 70)
         {
             o1.SetActive(true);
         }

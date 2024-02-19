@@ -25,6 +25,7 @@ public class Falling_Rock : MonoBehaviour
         if (other.gameObject.tag == "Projectiles")
         {
             Debug.Log("score");
+            AudioManager.instance.Play("Destroy");
             Destroy(this.gameObject);
             GameManager.Score += 5;
             

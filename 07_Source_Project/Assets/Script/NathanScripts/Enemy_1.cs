@@ -23,9 +23,9 @@ public class Enemy_1 : MonoBehaviour
         {
             Destroy(collision.gameObject);
             Destroy(gameObject);
+            AudioManager.instance.Play("Destroy");
             GameManager.Score += 10;
         }
     }
-
 
 }

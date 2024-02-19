@@ -34,6 +34,7 @@ public class Enemy_2 : MonoBehaviour
         {
             Destroy(gameObject);
             BounsPlayer();
+            AudioManager.instance.Play("Destroy");
             GameManager.Score += 20;
         }
 
