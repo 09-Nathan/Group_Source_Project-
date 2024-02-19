@@ -6,7 +6,11 @@ public class Player_Spawn_Bullets : MonoBehaviour
 {
     public GameObject Bullet1;
     bool shoot;
+<<<<<<< Updated upstream
     private float ShootCD = .35f;
+=======
+    private float ShootCD = .4f;
+>>>>>>> Stashed changes
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +24,11 @@ public class Player_Spawn_Bullets : MonoBehaviour
         if (ShootCD <= 0)
         {
             Firing();
+<<<<<<< Updated upstream
             ShootCD = .35f;
+=======
+            ShootCD = .4f;
+>>>>>>> Stashed changes
         }
     }
     void Firing()

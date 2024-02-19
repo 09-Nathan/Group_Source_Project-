@@ -38,6 +38,11 @@ public class Enemy_2 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Projectiles")
         {
+            
+            enemydamage(1);
+        }
+        if (collision.gameObject.tag == "Rocket")
+        {
             enemydamage(1);
         }
         if (collision.gameObject.tag == "Player")

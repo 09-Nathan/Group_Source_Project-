@@ -28,11 +28,18 @@ public class Falling_Rock : MonoBehaviour
             Debug.Log("score");
             Destroy(this.gameObject);
             GameManager.Score += 5;
-            
         }
+<<<<<<< Updated upstream
         if (other.gameObject.tag == "Player")
         {
             ps.TakenDamage(1);
+=======
+        if (other.gameObject.tag == "Rocket")
+        {
+            Debug.Log("Hit");
+            Destroy(this.gameObject);
+            GameManager.Score += 5;
+>>>>>>> Stashed changes
 
         }
     }
