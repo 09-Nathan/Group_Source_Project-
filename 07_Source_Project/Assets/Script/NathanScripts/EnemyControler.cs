@@ -9,7 +9,6 @@ public class EnemyControler : MonoBehaviour
     public GameObject bulletPrefab;
     public float shootInterval = 2f;
 
-    private bool movingRight = true;
     private Vector2 startPos;
 
     void Start()
