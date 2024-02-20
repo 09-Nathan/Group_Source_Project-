@@ -113,10 +113,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6003251946915736873}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a72e76880cb8384896aeeced0cf0668, type: 3}
+  m_Script: {fileID: 11500000, guid: 87a5117ed6ad601478f57c45a7ae94da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
   scoremanage: {fileID: 0}
   ps: {fileID: 0}
 --- !u!68 &-1835765662513056659
