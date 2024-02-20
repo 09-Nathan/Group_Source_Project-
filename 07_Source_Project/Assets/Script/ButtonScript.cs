@@ -29,7 +29,10 @@ public class ButtonScript : MonoBehaviour
     {
         SceneManager.LoadScene("Credits");
     }
-
+    public void Next()
+    {
+        SceneManager.LoadScene(2);
+    }
     public void Quit()
     {
         Application.Quit();
