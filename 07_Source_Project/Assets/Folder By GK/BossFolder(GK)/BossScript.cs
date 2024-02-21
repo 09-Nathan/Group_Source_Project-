@@ -29,12 +29,18 @@ public class BossScript : MonoBehaviour
         currentHealth -= damage;
         BossHPScript.SetHealth(currentHealth);
     }
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == ("Projectiles"))
         {
-            Debug.Log("Collision");
+            //Debug.Log("Collision");
             BossTakenDamage(1);
+            Destroy(collision.gameObject);
+        }
+        if (collision.gameObject.tag == ("Rocket"))
+        {
+            //Debug.Log("Collision");
+            BossTakenDamage(2);
             Destroy(collision.gameObject);
         }
     }

@@ -8,6 +8,9 @@ TagManager:
   - Projectiles
   - PowerShooting
   - PowerRocket
+  - FiringUp
+  - HPup
+  - Rocket
   layers:
   - Default
   - TransparentFX

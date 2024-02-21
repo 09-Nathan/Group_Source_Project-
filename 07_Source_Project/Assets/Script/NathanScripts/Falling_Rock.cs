@@ -5,10 +5,11 @@ using UnityEngine;
 public class Falling_Rock : MonoBehaviour
 {
     public float speed;
-
+    public GameManager scoremanage;
+    public PlayerScript ps;
     private void Start()
     {
-        
+        ps = GameObject.Find("player").GetComponent<PlayerScript>();
     }
     void Update()
     {
@@ -25,14 +26,19 @@ public class Falling_Rock : MonoBehaviour
         if (other.gameObject.tag == "Projectiles")
         {
             Debug.Log("score");
-            AudioManager.instance.Play("Destroy");
             Destroy(this.gameObject);
             GameManager.Score += 5;
-            
         }
-        else
+        if (other.gameObject.tag == "Player")
         {
-            Debug.Log("Collided");
+            ps.TakenDamage(1);
         }
+
+        if (other.gameObject.tag == "Rocket")
+            {
+                Destroy(this.gameObject);
+                GameManager.Score += 5;
+            }
+        
     }
 }
