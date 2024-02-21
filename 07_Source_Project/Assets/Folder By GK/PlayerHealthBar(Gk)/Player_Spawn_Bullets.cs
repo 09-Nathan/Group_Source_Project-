@@ -6,8 +6,9 @@ public class Player_Spawn_Bullets : MonoBehaviour
 {
     public GameObject Bullet1;
     bool shoot;
-    private float ShootCD = .4f;
-
+    public float ShootCD = .6f;
+    public bool PoweredUp = false;
+    public float powercd = 20f;
     void Start()
     {
 
@@ -16,12 +17,31 @@ public class Player_Spawn_Bullets : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ShootCD -= Time.deltaTime;
-        if (ShootCD <= 0)
+        if (PoweredUp == false)
         {
-            Firing();
-            ShootCD = .4f;
+            ShootCD -= Time.deltaTime;
+            if (ShootCD <= 0)
+            {
+                Firing();
+                ShootCD = .6f;
 
+            }
+        }
+        if (PoweredUp == true)
+        {
+            powercd -= Time.deltaTime;
+            ShootCD -= Time.deltaTime;
+            if (ShootCD <= 0)
+            {
+                Firing();
+                ShootCD = .3f;
+
+            }
+            if(powercd <= 0)
+            {
+                PoweredUp = false;
+                powercd = 20f;
+            }
         }
     }
     void Firing()

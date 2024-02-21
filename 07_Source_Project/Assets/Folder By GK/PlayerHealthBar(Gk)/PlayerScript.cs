@@ -7,6 +7,7 @@ public class PlayerScript : MonoBehaviour
 {
     public int maxHealth = 6;
     public int currentHealth;
+    public Player_Spawn_Bullets psb;
     public PlayerHealthBarScript healthBarScript;
     public PowerUpScript Secondary;
     public PowerUpScript Secondary2;
@@ -59,6 +60,11 @@ public class PlayerScript : MonoBehaviour
                 currentHealth +=2;
                 healthBarScript.SetHealth(currentHealth);
             }
+        }
+        if (other.gameObject.tag == ("FiringUp"))
+        {
+            psb.powercd = 20f;
+            psb.PoweredUp = true;
         }
     }
 }

@@ -444,6 +444,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &778311749 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7981890018011629204, guid: 5d57bfbfb65cdc146af5a8e42ac6f562,
+    type: 3}
+  m_PrefabInstance: {fileID: 8640910219191594171}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdcf8f4fb7462894f854f1d37c7c99fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &962275025
 GameObject:
   m_ObjectHideFlags: 0
@@ -1125,9 +1137,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1907044110}
   - component: {fileID: 1907044109}
+  - component: {fileID: 1907044111}
   m_Layer: 0
   m_Name: f
-  m_TagString: Untagged
+  m_TagString: FiringUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1196,6 +1209,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1907044111
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907044108}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3, y: 3}
+    newSize: {x: 3, y: 3}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3, y: 3}
+  m_EdgeRadius: 0
 --- !u!224 &1985192750 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7692959759265036829, guid: 49f74e950380043448e92f3f9076b9cc,
@@ -1390,6 +1429,11 @@ PrefabInstance:
       propertyPath: Secondary2
       value: 
       objectReference: {fileID: 985948256}
+    - target: {fileID: 7981890016628204445, guid: 5d57bfbfb65cdc146af5a8e42ac6f562,
+        type: 3}
+      propertyPath: psb
+      value: 
+      objectReference: {fileID: 778311749}
     - target: {fileID: 8640910219343968903, guid: 5d57bfbfb65cdc146af5a8e42ac6f562,
         type: 3}
       propertyPath: Bullet2
