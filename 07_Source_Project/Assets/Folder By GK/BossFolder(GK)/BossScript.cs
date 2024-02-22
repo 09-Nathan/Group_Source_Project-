@@ -10,6 +10,9 @@ public class BossScript : MonoBehaviour
     public BossHPScript BossHPScript;
     public float delayTime;
     private Animator boss;
+    public Collider2D play_win,boss_lose;
+    private bool bossing = false;
+    private bool bossDeathAudioPlayed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,15 +25,18 @@ public class BossScript : MonoBehaviour
     void Update()
     {
         this.transform.position -= new Vector3(0, 0.0005f);
-        
-        if (currentHealth == 0)
+ 
+        if (currentHealth <= 0 && !bossDeathAudioPlayed)
         {
-            Invoke("ChangeScene", delayTime);
-            boss.SetTrigger("BossDeath");
             AudioManager.instance.Play("BossDeath");
-            //this.gameObject.SetActive(false);
+            boss.SetTrigger("BossDeath");
+            boss_lose.enabled = false;
+            play_win.enabled = false;
+            Invoke("ChangeScene", delayTime);
+            bossDeathAudioPlayed = true;
         }
     }
+
     public void BossTakenDamage(int damage)
     {
         currentHealth -= damage;
@@ -53,7 +59,7 @@ public class BossScript : MonoBehaviour
     }
     private void ChangeScene()
     {        
-        SceneManager.LoadScene(4);
+        SceneManager.LoadScene(7);
     }
 
 

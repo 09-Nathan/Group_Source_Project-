@@ -12,11 +12,15 @@ public class PlayerScript : MonoBehaviour
     public PowerUpScript Secondary;
     public PowerUpScript Secondary2;
     public float delayTime=3f;
-    public Animator Player;
+    private Animator Player;
+    private Collider2D player_col;
+    private bool player_au;
+    public GameObject spawners;
     // Start is called before the first frame update
     void Start()
     {
         Player = GetComponent<Animator>();
+        player_col = GetComponent<Collider2D>();
         currentHealth = maxHealth;
         healthBarScript.SetMaxHealth(maxHealth);
     }
@@ -24,15 +28,20 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         if (Input.GetKeyDown(KeyCode.Space))
         {
             TakenDamage(1);
         }
-        if (currentHealth == 0)
+        */
+        if (currentHealth <= 0 && !player_au)
         {
-            Invoke("ChangeScene", delayTime);
             AudioManager.instance.Play("PlayerDeath");
+            spawners.SetActive(false);
             Player.SetTrigger("PlayerDeath");          
+            player_col.enabled = false;
+            Invoke("ChangeScene", delayTime);
+            player_au = true;
         }
         
     }
