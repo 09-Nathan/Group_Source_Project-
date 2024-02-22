@@ -10,8 +10,13 @@ public class GameManager : MonoBehaviour
     public float Timer;
     public static int Score;
     public GameObject o1,o2;
+    public int ob_time1, ob_time2;
     string format;
 
+    private void Awake()
+    {
+        Score = 0;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -36,7 +41,7 @@ public class GameManager : MonoBehaviour
                 SceneManager.LoadScene(3);
             }
         }
-
+        
 
     }
     
@@ -48,11 +53,11 @@ public class GameManager : MonoBehaviour
 
     void Spawncount()
     {
-        if(Timer < 70)
+        if(Timer < ob_time1)
         {
             o1.SetActive(true);
         }
-        if (Timer<50)
+        if (Timer<ob_time2)
         {
             o2.SetActive(true);
         }

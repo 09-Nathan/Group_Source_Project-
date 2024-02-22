@@ -11,9 +11,12 @@ public class PlayerScript : MonoBehaviour
     public PlayerHealthBarScript healthBarScript;
     public PowerUpScript Secondary;
     public PowerUpScript Secondary2;
+    public float delayTime=3f;
+    public Animator Player;
     // Start is called before the first frame update
     void Start()
     {
+        Player = GetComponent<Animator>();
         currentHealth = maxHealth;
         healthBarScript.SetMaxHealth(maxHealth);
     }
@@ -25,9 +28,11 @@ public class PlayerScript : MonoBehaviour
         {
             TakenDamage(1);
         }
-        if (currentHealth <= 0)
+        if (currentHealth == 0)
         {
-            SceneManager.LoadScene("Game Lose");
+            Invoke("ChangeScene", delayTime);
+            AudioManager.instance.Play("PlayerDeath");
+            Player.SetTrigger("PlayerDeath");          
         }
         
     }
@@ -38,9 +43,10 @@ public class PlayerScript : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other)
     {
+        
         if (other.gameObject.tag == ("PowerRocket"))
         {
-            //AudioManager.instance.Play("PowerUps");
+            AudioManager.instance.Play("PowerUp");
             Secondary.PowerUp = true;
             Secondary.PowerUpCD = 20f;
             Secondary2.PowerUp = true;
@@ -49,6 +55,7 @@ public class PlayerScript : MonoBehaviour
         }
         if(other.gameObject.tag == ("HPup"))
         {
+            AudioManager.instance.Play("PowerUp");
             if (maxHealth >= 9)
             {
                 currentHealth = 8;
@@ -63,10 +70,14 @@ public class PlayerScript : MonoBehaviour
         }
         if (other.gameObject.tag == ("FiringUp"))
         {
-            //AudioManager.instance.Play("PowerUps");
+            AudioManager.instance.Play("PowerUp");
             psb.PoweredUp = true;
             psb.powercd = 20f;
             Destroy(other.gameObject);
         }
+    }
+    private void ChangeScene()
+    {      
+        SceneManager.LoadScene(3);
     }
 }

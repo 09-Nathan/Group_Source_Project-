@@ -23,9 +23,9 @@ public class Falling_Rock : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Projectiles")
+        if (other.gameObject.tag == "Projectiles"|| other.gameObject.tag == "Rocket")
         {
-            Debug.Log("score");
+            AudioManager.instance.Play("Destroy");            
             Destroy(this.gameObject);
             GameManager.Score += 5;
         }
@@ -33,12 +33,6 @@ public class Falling_Rock : MonoBehaviour
         {
             ps.TakenDamage(1);
         }
-
-        if (other.gameObject.tag == "Rocket")
-            {
-                Destroy(this.gameObject);
-                GameManager.Score += 5;
-            }
         
     }
 }

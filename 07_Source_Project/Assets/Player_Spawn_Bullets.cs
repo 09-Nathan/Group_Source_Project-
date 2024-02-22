@@ -47,7 +47,7 @@ public class Player_Spawn_Bullets : MonoBehaviour
     void Firing()
     {
         //Debug.Log("Shoot Once");
-        //AudioManager.instance.Play("Shooting");
+        AudioManager.instance.Play("Shooting_Lazer");
         Instantiate(Bullet1, transform.position, transform.rotation);
     }
 }

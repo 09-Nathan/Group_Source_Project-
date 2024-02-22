@@ -22,7 +22,7 @@ public class BulletInteractionScript : MonoBehaviour
         if (other.gameObject.tag == "Player")
         {
             ps.TakenDamage(1);
-
+            Destroy(gameObject);
         }
     }
 }

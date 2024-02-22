@@ -10,6 +10,8 @@ public class Enemy_2 : MonoBehaviour
     public static int HP;
     public PlayerScript ps;
     public EnemyHp Healthbar;
+    public GameObject[] Bouns;
+    private int bouns_array;
     private void Start()
     {
         ps = GameObject.Find("player").GetComponent<PlayerScript>();
@@ -19,6 +21,7 @@ public class Enemy_2 : MonoBehaviour
     }
     void Update()
     {
+        bouns_array = Random.Range(0, Bouns.Length);
         Vector2 movement = Vector2.down * speed * Time.deltaTime;
         transform.Translate(movement);
 
@@ -29,8 +32,11 @@ public class Enemy_2 : MonoBehaviour
         }
         else if (HP<=0)
         {
+            AudioManager.instance.Play("Destroy");
             Destroy(gameObject);
             GameManager.Score += 20;
+            Bouns_Buff();
+            
         }
         
     }
@@ -56,4 +62,11 @@ public class Enemy_2 : MonoBehaviour
         Healthbar.SetHealth(HP);
 
     }
+    
+    void Bouns_Buff()
+    {
+        GameObject randomBonus = Bouns[Random.Range(0, Bouns.Length)];
+        Instantiate(randomBonus, transform.position, Quaternion.identity);
+    }
+    
 }

@@ -144,6 +144,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  ps: {fileID: 0}
+  Bouns:
+  - {fileID: 8090926804358476733, guid: aef90a6b1a16d17469ceb3642080b428, type: 3}
+  - {fileID: 7032556352703471765, guid: 74032af71dbb651459878d037b0fe3a4, type: 3}
+  - {fileID: 7032556352703471765, guid: 74032af71dbb651459878d037b0fe3a4, type: 3}
+  - {fileID: 5014752375475593253, guid: eead6034d0d57bc479a062e1779b9f39, type: 3}
+  - {fileID: 7032556352703471765, guid: 74032af71dbb651459878d037b0fe3a4, type: 3}
 --- !u!1 &4989641189500800353
 GameObject:
   m_ObjectHideFlags: 0

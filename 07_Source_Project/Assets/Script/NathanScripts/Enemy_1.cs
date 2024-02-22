@@ -6,13 +6,16 @@ public class Enemy_1 : MonoBehaviour
 {
     public float speed;
     public PlayerScript ps;
+    public GameObject[] Bouns;
+    private int bouns_array;
     private void Start()
     {
         ps = GameObject.Find("player").GetComponent<PlayerScript>();
-        Debug.Log("PS Found");
+       // Debug.Log("PS Found");
     }
     void Update()
     {
+        bouns_array = Random.Range(0, Bouns.Length);
         Vector2 movement = Vector2.down * speed * Time.deltaTime;
         transform.Translate(movement);
 
@@ -26,6 +29,8 @@ public class Enemy_1 : MonoBehaviour
     {
         if (collision.gameObject.tag == "Projectiles")
         {
+            AudioManager.instance.Play("Destroy");
+            Bouns_Buff();
             Destroy(collision.gameObject);
             Destroy(gameObject);
             GameManager.Score += 10;
@@ -37,11 +42,16 @@ public class Enemy_1 : MonoBehaviour
         }
         if (collision.gameObject.tag == "Rocket")
         {
+                      
             Destroy(collision.gameObject);
             Destroy(gameObject);
             GameManager.Score += 10;
         }
     }
 
-
+    void Bouns_Buff()
+    {
+        GameObject randomBonus = Bouns[Random.Range(0, Bouns.Length)];
+        Instantiate(randomBonus, transform.position, Quaternion.identity);
+    }
 }
