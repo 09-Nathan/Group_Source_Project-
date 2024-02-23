@@ -38,10 +38,8 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -1259,4 +1257,4 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Credits.unity
   - Assets/Scenes/Intro.unity
   - Assets/Scenes/Game Win_2.unity
-  playerPath: D:/GITHUB FILE/Group_Source_Project-/07_Source_Project.exe/07_Source_Project.exe
+  playerPath: C:/Users/hidde/OneDrive/Documents/GitHub/Group_Source_Project-/07_Source_Project.exe/07_Source_Project.exe
